@@ -2,7 +2,8 @@
 let mapSize = 16;
 let mapTiles
 
-let button = document.querySelector("button");
+let button = document.getElementById("startButton");
+let text = document.getElementById("testingText");
 
 button.onclick = () => {
     //if(mapTiles == null) {
@@ -14,5 +15,7 @@ button.onclick = () => {
             }
         }
     //}
-    alert(mapTiles);
+    let randomX = Math.ceil(Math.random()*mapSize-1);
+    let randomY = Math.ceil(Math.random()*mapSize-1);
+    text.innerHTML = mapTiles[randomX][randomY];
 }
