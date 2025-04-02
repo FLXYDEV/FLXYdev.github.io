@@ -17,5 +17,5 @@ button.onclick = () => {
     //}
     let randomX = Math.ceil(Math.random()*mapSize-1);
     let randomY = Math.ceil(Math.random()*mapSize-1);
-    text.innerHTML = toString(mapTiles[randomX][randomY]);
+    text.innerHTML = mapTiles[randomX][randomY];
 }
