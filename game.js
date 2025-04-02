@@ -1,4 +1,3 @@
-
 let mapSize = 16;
 let mapTiles
 
