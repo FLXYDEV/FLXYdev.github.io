@@ -5,7 +5,7 @@ let mapTiles
 let button = document.querySelector("button");
 
 button.onclick = () => {
-    if(mapTiles == null) {
+    //if(mapTiles == null) {
         mapTiles = [];
         for(let x = 0; x < mapSize; x++) {
             mapTiles[x] = [];
@@ -13,6 +13,6 @@ button.onclick = () => {
                 mapTiles[x][y] = x+y;
             }
         }
-    }
+    //}
     alert(mapTiles);
 }
