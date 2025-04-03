@@ -5,14 +5,30 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <h1>Hello World</h1>
+        <h1>Hello World.</h1>
         <p>I'm hosted with GitHub Pages.</p>
         <p>This website is used as a dumping ground for any projects i decide to share.</p>
         <button id="startButton" type="button"></button>
         <p id="testingText">testing text</p>
+        
 
-
-
-        <script src="game.js"></script>
+        <canvas id="mainCanvas" width="256" height="256"></canvas>
+        <script> 
+        //<script src="game.js">
+            let mapSize = 32;
+            let mapTiles = [];
+                    
+            let mainCanvas = /** @type {HTMLCanvasElement} */ document.getElementById("mainCanvas");
+            let ctx = /** @type {CanvasRenderingContext2D} */ mainCanvas.getContext("2d");
+                    
+            for(let x = 0; x < mapSize; x++) {
+                mapTiles[x] = [];
+                for(let y = 0; y < mapSize; y++) {
+                    mapTiles[x][y] = x+y;
+                    ctx.fillStyle = (x+y)%2==1 ? "gray": "black";
+                    var col = ctx.fillRect(x*8, y*8, 8, 8);
+                }
+            }
+        </script>
     </body>
 </html>
